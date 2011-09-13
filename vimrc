@@ -29,6 +29,8 @@ set smartcase
 
 set shortmess=atI
 
+colorscheme torte
+
 autocmd filetype python set expandtab
 
 augroup nemerle
@@ -71,3 +73,8 @@ set path+=.,/usr/include
 set path+=/usr/include/KDE,/usr/include/qt4
 " boost
 set path+=/usr/include/boost
+
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
+call pathogen#infect()
