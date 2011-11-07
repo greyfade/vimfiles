@@ -77,4 +77,6 @@ set path+=/usr/include/boost
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
+cmap w!! %!sudo tee > /dev/null %
+
 call pathogen#infect()
