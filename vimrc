@@ -1,21 +1,29 @@
+" Light backgrounds hurt my eyes.
 set background=dark
 
+" I speel gud, but I mkae tyops all the tiem.
 set spell spelllang=en_us
 
+" Syntax coloring is a set of guideposts.
 syntax on
 filetype on
 filetype plugin on
 filetype indent on
 
+" 4-column tabs is the One True Way.
 set ts=4 sw=4 sts=4
 
+" ... But some people have a hard time being consistent.
 set list listchars=tab:>-,trail:-
+" I can't count.
 set number
 
+" Convenience makes my fingers happy.
 map <F8> <ESC>:make<CR>
 imap <F8> <ESC>:make<CR>a
 map <F12> <ESC>:cn<CR>
 
+" This seemed like a good idea, but it'll probably only encourage bad habits.
 "command! -bang E e<bang>
 "command! -bang Q q<bang>
 "command! -bang W w<bang>
@@ -26,21 +34,31 @@ map <F12> <ESC>:cn<CR>
 "command! -bang Wq wq<bang>
 "command! -bang WQ wq<bang>
 
+" A GVim thing.
 set title
+
+" I'm forgetful.
 set history=1000
 
+" This keeps me centered.
 set scrolloff=3
 
+" Helps me find things.
 set ruler
 set showmatch
 set incsearch
 set hlsearch
+
+" This was before I found out about \c
 set smartcase
 
+" My, that bottom bar can get cluttered...
 set shortmess=atI
 
+" Everything else looks like crap.
 colorscheme torte
 
+" I hate python.
 autocmd filetype python set expandtab
 
 augroup nemerle
@@ -60,6 +78,8 @@ augroup Binary
 	au BufWritePost *.bin set nomod | endif
 augroup END
 
+" cscope seems to work a little better than ctags, but Vim doesn't auto-load
+" cscope files like it does ctags files.
 if has("cscope")
 	set cst
 	set csto=0
@@ -78,6 +98,8 @@ let ComniCpp_MayCompleteScope=1
 
 set completeopt=longest,menu
 
+" Search paths for completions.
+" Starting with local files and the default includes
 set path+=.,/usr/include
 " KDE-specific
 set path+=/usr/include/KDE,/usr/include/qt4
@@ -87,6 +109,9 @@ set path+=/usr/include/boost
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
+" I often forget to use sudoedit. Much to my chagrin.
 cmap w!! %!sudo tee > /dev/null %
 
+" Keeps my immune system in tip-top shape.
+" Also, loads bundled scripts and plug-ins.
 call pathogen#infect()
