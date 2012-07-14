@@ -115,3 +115,6 @@ cmap w!! %!sudo tee > /dev/null %
 " Keeps my immune system in tip-top shape.
 " Also, loads bundled scripts and plug-ins.
 call pathogen#infect()
+
+au BufNewFile,BufRead *.cpp set syntax=cpp11
+
