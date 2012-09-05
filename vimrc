@@ -56,7 +56,7 @@ set smartcase
 set shortmess=atI
 
 " Everything else looks like crap.
-colorscheme torte
+colorscheme Tomorrow-Night
 
 " I hate python.
 autocmd filetype python set expandtab
