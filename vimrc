@@ -4,6 +4,8 @@ set background=dark
 " I speel gud, but I mkae tyops all the tiem.
 set spell spelllang=en_us
 
+set nocompatible
+
 " Syntax coloring is a set of guideposts.
 syntax on
 filetype on
@@ -21,7 +23,7 @@ set number
 " Convenience makes my fingers happy.
 map <F8> <ESC>:make<CR>
 imap <F8> <ESC>:make<CR>a
-map <F12> <ESC>:cn<CR>
+" map <F12> <ESC>:cn<CR>
 
 " This seemed like a good idea, but it'll probably only encourage bad habits.
 "command! -bang E e<bang>
@@ -56,7 +58,7 @@ set smartcase
 set shortmess=atI
 
 " Everything else looks like crap.
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 " I hate python.
 autocmd filetype python set expandtab
@@ -108,6 +110,10 @@ set path+=/usr/include/boost
 
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+let g:clang_library_path = '/usr/lib'
+let g:clang_auto_select = 1
+let g:clang_complete_auto = 1
+let g:clang_complete_macros = 1
 
 " I often forget to use sudoedit. Much to my chagrin.
 cmap w!! %!sudo tee > /dev/null %
@@ -117,4 +123,5 @@ cmap w!! %!sudo tee > /dev/null %
 call pathogen#infect()
 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.hpp set syntax=cpp11
 
