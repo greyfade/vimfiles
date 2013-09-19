@@ -124,4 +124,8 @@ call pathogen#infect()
 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.hpp set syntax=cpp11
+au BufNewFile,BufRead *.mustache set ft=html
 
+let g:coffee_compiler = "/usr/bin/coffee"
+let g:coffee_make_options = ""
+au BufNewFile,BufRead *.coffee let b:coffee_litcoffee=""
