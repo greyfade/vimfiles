@@ -24,6 +24,7 @@ set number
 map <F8> <ESC>:make<CR>
 imap <F8> <ESC>:make<CR>a
 " map <F12> <ESC>:cn<CR>
+nmap <leader>g :silent !grunt hogan coffee less<CR><C-L>
 
 " This seemed like a good idea, but it'll probably only encourage bad habits.
 "command! -bang E e<bang>
@@ -62,6 +63,9 @@ colorscheme Tomorrow-Night-Bright
 
 " I hate python.
 autocmd filetype python set expandtab
+autocmd filetype php set expandtab
+autocmd filetype coffee set expandtab
+autocmd filetype mustache set expandtab
 
 augroup nemerle
 	au!
