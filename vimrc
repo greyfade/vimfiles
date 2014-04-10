@@ -124,6 +124,8 @@ let g:clang_auto_select = 1
 let g:clang_complete_auto = 1
 let g:clang_complete_macros = 1
 
+let g:proj_flags='imstS'
+
 " I often forget to use sudoedit. Much to my chagrin.
 cmap w!! %!sudo tee > /dev/null %
 
