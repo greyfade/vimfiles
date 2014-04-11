@@ -68,7 +68,7 @@ autocmd filetype coffee set expandtab
 autocmd filetype mustache set expandtab
 
 " NERDtree crap
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 map <esc>t :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
