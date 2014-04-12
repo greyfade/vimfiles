@@ -39,6 +39,9 @@ nmap <leader>g :silent !grunt hogan coffee less<CR><C-L>
 
 " A GVim thing.
 set title
+if has("gui_running")
+	set go=aegirLt
+endif
 
 " I'm forgetful.
 set history=1000
