@@ -12,6 +12,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
 " 4-column tabs is the One True Way.
 set ts=4 sw=4 sts=4
 
