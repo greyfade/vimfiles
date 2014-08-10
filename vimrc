@@ -4,7 +4,11 @@ set background=dark
 " I speel gud, but I mkae tyops all the tiem.
 set spell spelllang=en_us
 
+" VI est mortuus. Vim vivat.
 set nocompatible
+
+" May as well...
+set mouse=a
 
 " Syntax coloring is a set of guideposts.
 syntax on
